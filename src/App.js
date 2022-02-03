@@ -28,9 +28,9 @@ function App() {
           })}
         </div> */}
 
-      <ShoesContextProvider>
+
         <Shoes />
-      </ShoesContextProvider>
+ 
 
       {/* <PantsProvider>
         <Pants />

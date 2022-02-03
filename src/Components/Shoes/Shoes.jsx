@@ -1,14 +1,13 @@
-import { useContext } from "react";
-import {myContext} from "../../context/ShoesContext"
+
+import {ShoesContextProvider} from "../../context/ShoesContext"
+import { ShoesCards } from "../ShoesCards/ShoesCards";
 
 const Shoes = ()=>{
-let {array,setArray}=useContext(myContext)
+
     return(
-        <div>
-            {
-                array.map((item)=> <li>{item.Price}</li>)
-            }
-        </div>           
+        <ShoesContextProvider>
+            <ShoesCards/>
+        </ShoesContextProvider>        
     )
 }
 export default Shoes;

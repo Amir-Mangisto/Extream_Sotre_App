@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
+.container{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.cards{
+  width: 30%;
+  padding: 20px;
+  /* border: 4px black solid; */
+}
 
 .App-logo {
   height: 40vmin;
