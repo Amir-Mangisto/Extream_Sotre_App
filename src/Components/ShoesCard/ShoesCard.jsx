@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -51,11 +51,11 @@ export const ShoesCard = ({item}) => {
       alt="Paella dish"
     />
     <CardContent>
-      <Typography variant="body2" color="text.secondary">
+      {/* <Typography variant="body2" color="text.secondary">
         This impressive paella is a perfect party dish and a fun meal to cook
         together with your guests. Add 1 cup of frozen peas along with the mussels,
         if you like.
-      </Typography>
+      </Typography> */}
     </CardContent>
     <CardActions disableSpacing>
       <IconButton aria-label="add to favorites">
@@ -75,19 +75,20 @@ export const ShoesCard = ({item}) => {
     </CardActions>
     <Collapse in={true} timeout="auto" unmountOnExit>
       <CardContent>
-        <Typography paragraph>{item.ShoeType}</Typography>
+        <Typography paragraph><b>{item.ShoeType}</b></Typography>
         <Typography paragraph>
-        {item.Company}
+          <h3>{item.Company}</h3
+          >    
         </Typography>
         <Typography paragraph>
         {item.Brand}
         </Typography>
         <Typography paragraph>
-          {item.Price}
+          {`${item.Price}$`}
         </Typography>
-        <Typography>
+        {/* <Typography>
           Set aside off of the heat to let rest for 10 minutes, and then serve.
-        </Typography>
+        </Typography> */}
       </CardContent>
     </Collapse>
   </Card>

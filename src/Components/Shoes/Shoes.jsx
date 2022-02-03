@@ -6,6 +6,7 @@ const Shoes = ()=>{
 
     return(
         <ShoesContextProvider>
+            <h1 className="title"> All Shoes :</h1>
             <ShoesCards/>
         </ShoesContextProvider>        
     )
