@@ -7,12 +7,17 @@ let namesArr =["name1","name2","name3"];
 
 export const ShoesContextProvider = ({children})=>{
     const [array,setArray]=useState([])
+    const [isLoading,setIsLoading]=useState(false)
     useEffect(()=>{
-        GetInfo().then(res =>setArray(res))
+        setIsLoading(true)
+        GetInfo()
+        .then(res =>setArray(res))
+        .catch((error)=>console.log(error))
+        .finally(()=>{setIsLoading(false)})
     },[])
     
     return(
-        <myContext.Provider value={{array,setArray}}>
+        <myContext.Provider value={{array,setArray,isLoading}}>
             {children}
         </myContext.Provider>
     )
